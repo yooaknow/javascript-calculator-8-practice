@@ -1,6 +1,8 @@
 import { Console } from "@woowacourse/mission-utils";
 
-export add (input){
-  Console.print(`결과: ${input}`)
-  
-}
+export function Add(input){
+
+  let trim_input= input.trim();
+  Console.print(`trim으로 문자열 제거의 결과 : ${trim_input}`);
+
+} 

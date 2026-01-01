@@ -1,10 +1,10 @@
 import { Console } from "@woowacourse/mission-utils";
-import { Add } from "./src/Add.js"
+import { Add } from "./Add.js";
 
 class App   {
   async run() {
     const input = await Console.readLineAsync(`숫자를 입력해 주세요: `);
-    Console.print(`결과 : ${input}`);
+    Console.print(`App.js 그대로의 결과 : ${input}`);
 
     Add (input);
 
