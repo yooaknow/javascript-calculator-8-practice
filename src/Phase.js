@@ -8,11 +8,16 @@ export function Phase(trim_input){
 
   if (trim_input.startsWith("//")){
     let start = trim_input.indexOf("//") +2;
-    let end = trim_input.indexOf("\\n");
+    let end = trim_input.indexOf("\\n"); 
 
-    let arrayOfString =  trim_input.substring(start, end);
-    Console.print(`start: ${start}`);
-    Console.print(`// \n 사이에 들어간 값: ${arrayOfString}`);
+    let aspecific =  trim_input.substring(start, end);
+    Console.print(`// \\n 사이에 들어간 값: ${aspecific}`);
+
+    let trim_input1= trim_input.substr(5);
+
+    
+    let arrayOfString = trim_input1.split(aspecific);
+    Console.print(`// \\n로 나뉘어진 문자열 ${arrayOfString}`);
 
   } else{
     let arrayOfString = trim_input.split(/,:/);
