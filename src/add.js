@@ -1,10 +1,23 @@
 import { Console } from '@woowacourse/mission-utils';
+import { parse } from './parser.js';
 
 export const add = (input)=>
 {
-  const newinput = input.trim();
+  const trim_input = input.trim();
 
-  if (newinput === '') {
-    return 0;
+  if(trim_input !== null && trim_input !== undefined) {
+    const result = parse(trim_input);
+    var newArr = result.map(Number);
+
+    let sum = 0;
+
+    for (let i = 0; i < newArr.length; i++ ) {
+    sum += newArr[i];
+
+    
   }
+    return sum;
+} else {
+  return 0;
+}
 }
