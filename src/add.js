@@ -9,6 +9,10 @@ export const add = (input)=>
     const result = parse(trim_input);
     var newArr = result.map(Number);
 
+    if (newArr.some((n) => n < 0)) {
+    throw new Error("[ERROR] 음수는 허용되지 않습니다.");
+  }
+
     let sum = 0;
 
     for (let i = 0; i < newArr.length; i++ ) {
