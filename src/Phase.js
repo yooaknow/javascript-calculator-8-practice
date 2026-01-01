@@ -3,6 +3,7 @@ import { Console } from "@woowacourse/mission-utils";
 export function Phase(trim_input){
 
   let answer =0;
+  const error = new Error('[ERROR] 숫자 이외의 값이 입력되었습니다.');
 
 
   if (trim_input.startsWith("//")){
@@ -30,8 +31,13 @@ export function Phase(trim_input){
 
     Console.print(`, ;으로 나눠진 값들: ${arrayOfString}`);
 
-    for (let i =0; i <arrayOfString.length; i++) {  
-      answer += Number(arrayOfString[i]);  
+    for (let i =0; i <arrayOfString.length; i++) { 
+      
+      if (arrayOfString[i]<0 || isNaN(arrayOfString[i])) {
+        throw error;
+      }
+
+       answer += Number(arrayOfString[i]);
     }
 
     return answer;
