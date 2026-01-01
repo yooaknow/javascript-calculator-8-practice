@@ -8,7 +8,7 @@ const mockQuestions = (inputs) => {
     const input = inputs.shift();
     return Promise.resolve(input);
   });
-};
+}; 
 
 const getLogSpy = () => {
   const logSpy = jest.spyOn(MissionUtils.Console, "print");
