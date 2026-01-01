@@ -1,15 +1,19 @@
 import { Console } from "@woowacourse/mission-utils";
+import { Phase } from "./Phase.js";
 
 export function Add(input){
 
   let trim_input= input.trim();
-  Console.print(`trim으로 문자열 제거의 결과 : ${trim_input}`);
 
   if (trim_input === "") {
     return 0;
 
   } else {
-    Console.print(`0이 아닌 경우 코드`); }
+    let final_phase= Phase(trim_input);
+    Console.print(`최종 나눠진 숫자 값 ${final_phase}`); 
+    return final_phase;
+
+  }
 
 
 } 
