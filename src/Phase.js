@@ -1,6 +1,8 @@
 import { Console } from "@woowacourse/mission-utils";
 
 export function Phase(trim_input){
+
+  let answer =0;
   
   // 숫자 들어와지고 있음. 
   // 이를 통해 . ;로 나눠지는 로직과, 
@@ -19,8 +21,15 @@ export function Phase(trim_input){
     let arrayOfString = trim_input1.split(aspecific);
     Console.print(`// \\n로 나뉘어진 문자열 ${arrayOfString}`);
 
+    for (let i =0; i <arrayOfString.length; i++) {  
+      answer += Number(arrayOfString[i]);  
+    }
+
+    Console.print(answer);
+
   } else{
     let arrayOfString = trim_input.split(/,:/);
+
     Console.print(`, ;으로 나눠진 값들: ${arrayOfString}`);
   }
 

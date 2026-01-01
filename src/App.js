@@ -1,5 +1,5 @@
 import { Console } from "@woowacourse/mission-utils";
-import { Add } from "./Add.js";
+import { Add } from "./add.js";
 
 class App   {
   async run() {
